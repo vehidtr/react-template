@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Company = () => {
-  return <div>COMPANYYYYYYYYYY</div>;
+  return <div>COMPANY</div>;
 };
 
 export default Company;

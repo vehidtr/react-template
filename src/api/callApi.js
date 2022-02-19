@@ -41,6 +41,6 @@ export const callAPI = async (url, method, data = "") => {
     const response = await axios(option);
     return response;
   } catch (error) {
-    return { data: error.response.data, error: true };
+    return { data: error, error: true };
   }
 };
