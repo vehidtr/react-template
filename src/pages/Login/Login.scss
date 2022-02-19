@@ -1,0 +1,83 @@
+.Login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/images/background.png);
+  background-size: cover;
+  // background: #f6f6f6;
+
+  .form-container {
+    position: relative;
+    background: #ffffffd6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 375px;
+    border-radius: 3px;
+    width: 400px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 8px 12px;
+
+    .form-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: #6a6a6a;
+      margin-bottom: 35px;
+      width: 70%;
+    }
+
+    input {
+      width: 70%;
+      height: 45px;
+      margin-bottom: 15px;
+      border-radius: 3px;
+      outline: none;
+      border: 1.5px solid #e5e5e5;
+      box-sizing: border-box;
+      padding-left: 15px;
+      color: #9b9797;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .input-password {
+      margin-bottom: 30px;
+    }
+
+    .password-container {
+      width: 100%;
+      position: relative;
+
+      img {
+        width: 18px;
+        position: absolute;
+        right: 75px;
+        top: 13px;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      width: 70%;
+      height: 45px;
+      border: none;
+      border-radius: 3px;
+      background: #0fcfbe;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background: #0ebdad;
+      }
+    }
+
+    ::placeholder {
+      color: #d1d1d1;
+      font-family: "Red Hat Text";
+    }
+  }
+}
