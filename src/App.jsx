@@ -1,14 +1,12 @@
-import "App.scss";
-import PrivateRoute from "components/PrivateRoute/PrivateRoute";
-import NotFound from "pages/NotFound/NotFound";
-import Login from "pages/Login/Login";
-import { Suspense } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import routes from "utils/routes";
-import Company from "pages/Company/Company";
+import PrivateRoute from "components/PrivateRoute/PrivateRoute";
 import PublicRoutes from "components/PublicRoutes/PublicRoutes";
+import "App.scss";
 
 function App() {
+  const [isAuth, setisAuth] = useState(false);
   return (
     <div className="App">
       <BrowserRouter>
@@ -23,7 +21,7 @@ function App() {
                     path={route.path}
                     element={
                       <PrivateRoute
-                        isAuth={true}
+                        isAuth={isAuth}
                         path={route.path}
                         protect={route.protected}
                       >
@@ -39,7 +37,7 @@ function App() {
                     path={route.path}
                     element={
                       <PublicRoutes
-                        isAuth={true}
+                        isAuth={isAuth}
                         path={route.path}
                         protect={route.protected}
                       >

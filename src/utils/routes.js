@@ -1,8 +1,7 @@
-import { lazy } from "react";
 /* const Login = lazy(async () => await import("pages/Login/Login")); */
 import Login from "pages/Login/Login";
 import NotFound from "pages/NotFound/NotFound";
-import Company from "pages/Company/Company";
+import Home from "pages/Home/Home";
 
 export const routes = [
   {
@@ -20,10 +19,10 @@ export const routes = [
     protected: false,
   },
   {
-    path: "/company",
-    name: "Company",
+    path: "/",
+    name: "Home",
     exact: true,
-    component: Company,
+    component: Home,
     protected: true,
   },
 ];
