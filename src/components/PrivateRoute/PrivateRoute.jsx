@@ -1,7 +1,7 @@
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 
-const PrivateRoute = ({ children, isAuth, path, protect }) => {
+const PrivateRoute = ({ children, isAuth }) => {
   let location = useLocation();
 
   if (!isAuth) {
